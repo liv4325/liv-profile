@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle at top, #000000 0%, #0f0f1f 60%, #1a1a2e 100%);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://i.imgur.com/UOV1MPH.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/WPQO2Kb.png') repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-card {
+  background: rgba(25, 10, 25, 0.85);
+  border: 2px solid #900c3f;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow: 0 0 60px rgba(255, 100, 150, 0.3);
+  transform: scale(1.02);
+}
+
+.name {
+  font-size: 48px;
+  color: #d4af37;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4),
+               0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.pronouns {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.about {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f5f5f5;
+  text-shadow: 0 0 4px #4a0033;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .profile-card {
+    margin: 20px;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .about {
+    font-size: 14px;
+  }
+}
